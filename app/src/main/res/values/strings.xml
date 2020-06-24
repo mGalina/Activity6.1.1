@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Activity6.1.1</string>
+    <string name="hello_world">Hello World</string>
+    <string name="onStart">onStart</string>
+    <string name="onResume">onResume</string>
+    <string name="onPause">onPause</string>
+    <string name="onStop">onStop</string>
+    <string name="onDestroy">onDestroy</string>
+    <string name="onRestart">onRestart</string>
+    <string name="onPostCreate">onPostCreate</string>
+    <string name="onPostResume">onPostResume</string>
+    <string name="onCreate">onCreate</string>
+    <string name="onKeyDown">onKeyDown</string>
+    <string name="onKeyLongPress">onKeyLongPress</string>
+    <string name="onBackPressed">onBackPressed</string>
+    <string name="onSaveInstanceState">onSaveInstanceState</string>
+    <string name="onRestoreInstanceState">onRestoreInstanceState</string>
+</resources>
