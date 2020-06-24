@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        mText.setText(text);
         Log.d(LOG_TAG, getString(R.string.onStart));
         mText.append("\n" + getString(R.string.onStart));
     }
