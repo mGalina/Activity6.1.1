@@ -13,17 +13,21 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView mText;
     private static final String LOG_TAG = "MyLogs";
-    private String text ="undefined";
+    private String text = "undefined";
     final static String nameVariableKey = "NAME_VARIABLE";
     final static String textViewTexKey = "TEXTVIEW_TEXT";
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.d(LOG_TAG, getString(R.string.onCreate));
 
         mText = findViewById(R.id.tv_hello);
+
+        if (savedInstanceState != null) {
+            onRestart();
+        }
     }
 
     @Override
@@ -116,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         text = savedInstanceState.getString(nameVariableKey);
-        String textViewText= savedInstanceState.getString(textViewTexKey);
+        String textViewText = savedInstanceState.getString(textViewTexKey);
         mText.setText(textViewText);
         Log.d(LOG_TAG, getString(R.string.onRestoreInstanceState));
         mText.append("\n" + getString(R.string.onRestoreInstanceState));
