@@ -15,4 +15,5 @@
     <string name="onBackPressed">onBackPressed</string>
     <string name="onSaveInstanceState">onSaveInstanceState</string>
     <string name="onRestoreInstanceState">onRestoreInstanceState</string>
+    <string name="bundle">Bundle is not null</string>
 </resources>

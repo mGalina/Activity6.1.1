@@ -26,7 +26,14 @@ public class MainActivity extends AppCompatActivity {
         mText = findViewById(R.id.tv_hello);
 
         if (savedInstanceState != null) {
-            onRestart();
+            Log.d(LOG_TAG, getString(R.string.bundle));
+            text = savedInstanceState.getString(nameVariableKey);
+            String textViewText = savedInstanceState.getString(textViewTexKey);
+            mText.append(textViewText);
+            mText.append("\n" + getString(R.string.bundle));
+        } else {
+            Log.d(LOG_TAG, getString(R.string.bundle));
+            mText.append(getString(R.string.bundle));
         }
     }
 
@@ -119,9 +126,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        text = savedInstanceState.getString(nameVariableKey);
-        String textViewText = savedInstanceState.getString(textViewTexKey);
-        mText.setText(textViewText);
         Log.d(LOG_TAG, getString(R.string.onRestoreInstanceState));
         mText.append("\n" + getString(R.string.onRestoreInstanceState));
     }
