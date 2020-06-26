@@ -14,8 +14,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView mText;
     private static final String LOG_TAG = "MyLogs";
     private String text = "undefined";
-    final static String nameVariableKey = "NAME_VARIABLE";
-    final static String textViewTexKey = "TEXTVIEW_TEXT";
+    private static final String NAME_VARIABLE_KEY = "NAME_VARIABLE";
+    private static final String TEXT_VIEW_TEXT_KEY = "TEXTVIEW_TEXT";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
         if (savedInstanceState != null) {
             Log.d(LOG_TAG, getString(R.string.bundle));
-            text = savedInstanceState.getString(nameVariableKey);
-            String textViewText = savedInstanceState.getString(textViewTexKey);
+            text = savedInstanceState.getString(NAME_VARIABLE_KEY);
+            String textViewText = savedInstanceState.getString(TEXT_VIEW_TEXT_KEY);
             mText.append(textViewText);
             mText.append("\n" + getString(R.string.bundle));
         } else {
@@ -116,8 +116,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
-        outState.putString(nameVariableKey, text);
-        outState.putString(textViewTexKey, mText.getText().toString());
+        outState.putString(NAME_VARIABLE_KEY, text);
+        outState.putString(TEXT_VIEW_TEXT_KEY, mText.getText().toString());
         super.onSaveInstanceState(outState);
         Log.d(LOG_TAG, getString(R.string.onSaveInstanceState));
         mText.append("\n" + getString(R.string.onSaveInstanceState));
