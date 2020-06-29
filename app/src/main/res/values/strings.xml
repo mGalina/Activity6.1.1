@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Activity6.1.1</string>
-    <string name="hello_world">Hello World</string>
     <string name="onStart">onStart</string>
     <string name="onResume">onResume</string>
     <string name="onPause">onPause</string>
